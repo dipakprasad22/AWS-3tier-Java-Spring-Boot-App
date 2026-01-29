@@ -1,2 +1,6 @@
-# AWS-3tier-Java-Spring-Boot-App
-Production-ready AWS 3-tier architecture, deploying a Java Spring Boot application
+# Java 3-Tier Sample Application
+
+Simple Spring Boot application for AWS 3-tier architecture demo.
+
+Endpoint:
+GET /hello
