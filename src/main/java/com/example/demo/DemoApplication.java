@@ -37,4 +37,3 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 }
-# package com.example.demo; # This file combines the main application and REST controller for user management.
