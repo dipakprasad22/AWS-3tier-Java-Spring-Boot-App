@@ -93,5 +93,5 @@ java -jar app.jar
     - Request an ACM certificate
     - Configure Route 53 with a custom domain
 
-### Author
+### Author (Dipak Prasad)
 Built as a hands-on project to learn real-world AWS architecture and DevOps practices using Java and Spring Boot.
