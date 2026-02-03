@@ -33,6 +33,11 @@ public class DemoApplication {
         return userRepository.findAll();
     }
 
+    @GetMapping("/health")
+    public String health() {
+        return "OK";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
