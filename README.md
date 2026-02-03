@@ -6,25 +6,13 @@ The goal of this project is not just to run an application, but to build a **sec
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
-User
-↓
-Route 53 (DNS)
-↓
-CloudFront (CDN + HTTPS)
-↓
-Application Load Balancer (Public Subnets)
-↓
-EC2 Auto Scaling Group (Private App Subnets)
-↓ ↓
-Redis Cache RDS Proxy
-(Cache Layer) ↓
-RDS MySQL (Primary + Read Replica)
+User >> Route 53 (DNS) >> CloudFront (CDN + HTTPS) >> Application Load Balancer (Public Subnets) >> EC2 Auto Scaling Group (Private App Subnets) >> Redis Cache RDS Proxy (Cache Layer) >> RDS MySQL (Primary + Read Replica)
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Backend**: Java, Spring Boot
 - **Compute**: EC2 Auto Scaling Group
@@ -41,7 +29,7 @@ RDS MySQL (Primary + Read Replica)
 
 ---
 
-## ⚙️ Application Profiles
+## Application Profiles
 
 The application uses **Spring Profiles** to support multiple environments using the **same codebase**.
 
