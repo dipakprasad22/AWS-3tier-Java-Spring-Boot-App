@@ -47,7 +47,8 @@ java -jar app.jar --spring.profiles.active=local
 java -jar app.jar
 
 ### Step-by-Step Build Guide
-**1. Networking (VPC)**
+
+1. Networking (VPC)
     - Create a VPC (10.0.0.0/16)
     - Create subnets:
         Public subnets (ALB, NAT Gateway, Bastion)
@@ -58,37 +59,37 @@ java -jar app.jar
     - Create NAT Gateway
     - Configure public and private route tables
 
-  **2. Security Groups**
+  2. Security Groups
     - ALB SG: Allow HTTP/HTTPS from the internet
     - Bastion SG: Allow SSH from your IP
     - App SG: Allow traffic only from ALB and Bastion
     - DB SG: Allow MySQL traffic only from App SG
     - Redis SG: Allow Redis traffic only from App SG
 
-  **3. Compute Layer**
+  3. Compute Layer
     - Deploy a Bastion Host in a public subnet
     - Create an Application Load Balancer
     - Create a Target Group with /health endpoint
     - Create a Launch Template
     - Create an Auto Scaling Group using private app subnets
 
-  **4. Database Layer**
+  4. Database Layer
     - Create RDS MySQL (Multi-AZ)
     - Create a Read Replica
     - Create a DB Subnet Group
     - Create and attach Amazon RDS Proxy
 
-  **5. Secrets Management**
+  5. Secrets Management
     - Store DB credentials in AWS Secrets Manager
     - Enable automatic secret rotation
     - Attach an IAM role to EC2 instances to allow secret access
 
-  **6. Cache Layer**
+  6. Cache Layer
     - Create an ElastiCache Redis cluster
     - Place Redis in private cache subnets
     - Enable caching in Spring Boot
 
-  **7. Edge & DNS**
+  7. Edge & DNS
     - Create a CloudFront distribution in front of ALB
     - Request an ACM certificate
     - Configure Route 53 with a custom domain
